@@ -1,9 +1,8 @@
 package com.keyin.city;
 
+import com.keyin.airport.Airport;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,5 +15,10 @@ public class CityController {
     @GetMapping("/city")
     public List<City> getAllCity(){
         return cityService.getAllCity();
+    }
+
+    @PostMapping("/city")
+    public City createNewCity(@RequestBody City city) {
+        return cityService.createCity(city);
     }
 }

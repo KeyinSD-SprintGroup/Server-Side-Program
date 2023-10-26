@@ -8,9 +8,14 @@ import java.util.List;
 
 @Service
 public class AirportService {
-    private ArrayList<Airport> airportList = new ArrayList<Airport>();
+    private final ArrayList<Airport> airportList = new ArrayList<Airport>();
 
     public List<Airport> getAllAirport() {
-        return new ArrayList<Airport>();
+        return airportList;
+    }
+
+    public Airport createAirport(Airport airport) {
+        airportList.add(airport);
+        return airport;
     }
 }
