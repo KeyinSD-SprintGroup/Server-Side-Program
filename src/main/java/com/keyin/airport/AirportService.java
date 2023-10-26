@@ -1,6 +1,5 @@
 package com.keyin.airport;
 
-import com.keyin.aircraft.Aircraft;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
