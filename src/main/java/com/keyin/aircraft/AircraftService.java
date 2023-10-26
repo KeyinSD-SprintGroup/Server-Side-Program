@@ -7,9 +7,14 @@ import java.util.List;
 
 @Service
 public class AircraftService {
-    private ArrayList<Aircraft> aircraftList = new ArrayList<Aircraft>();
+    private final List<Aircraft> aircraftList = new ArrayList<>();
 
     public List<Aircraft> getAllAircraft() {
-        return new ArrayList<Aircraft>();
+        return aircraftList;
+    }
+
+    public Aircraft createAircraft(Aircraft aircraft) {
+        aircraftList.add(aircraft);
+        return aircraft;
     }
 }
