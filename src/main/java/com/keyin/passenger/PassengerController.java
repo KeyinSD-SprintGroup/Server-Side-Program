@@ -1,9 +1,8 @@
 package com.keyin.passenger;
 
+import com.keyin.airport.Airport;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,5 +15,10 @@ public class PassengerController {
     @GetMapping("/passenger")
     public List<Passenger> getAllPassengers() {
         return passengerService.getAllPassenger();
+    }
+
+    @PostMapping("/passenger")
+    public Passenger createNewPassenger(@RequestBody Passenger passenger) {
+        return passengerService.createPassenger(passenger);
     }
 }

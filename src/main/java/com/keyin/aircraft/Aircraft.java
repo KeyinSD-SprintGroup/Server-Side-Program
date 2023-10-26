@@ -11,7 +11,10 @@ public class Aircraft {
     }
 
     public void setId(long id) {
-        this.id = id;
+        if (id < 0) {
+            throw new IllegalArgumentException("id must be 0 or greater");
+        }
+            this.id = id;
     }
 
     public String getType() {

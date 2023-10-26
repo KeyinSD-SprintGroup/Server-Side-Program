@@ -7,9 +7,14 @@ import java.util.List;
 
 @Service
 public class PassengerService {
-    private ArrayList<Passenger> passengerList = new ArrayList<Passenger>();
+    private final ArrayList<Passenger> passengerList = new ArrayList<Passenger>();
 
     public List<Passenger> getAllPassenger() {
-        return new ArrayList<Passenger>();
+        return passengerList;
+    }
+
+    public Passenger createPassenger(Passenger passenger) {
+        passengerList.add(passenger);
+        return passenger;
     }
 }
