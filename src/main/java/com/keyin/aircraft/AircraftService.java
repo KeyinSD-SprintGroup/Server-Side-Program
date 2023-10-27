@@ -19,7 +19,7 @@ public class AircraftService {
         return aircraft;
     }
 
-    public List<Aircraft> findAircraftBySearchParameters(AircraftSearchParameters aircraftSearchParameters) {
+    public List<Aircraft> findAircraftByParameters(AircraftSearchParameters aircraftSearchParameters) {
         List<Aircraft> searchResults = new ArrayList<Aircraft>();
 
         for (Aircraft aircraft : aircraftList) {
