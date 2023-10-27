@@ -46,7 +46,7 @@ public class AircraftController {
             return new ArrayList<>();
         }
         System.out.println(aircraftSearchParameters);
-        return aircraftService.findAircraftBySearchParameters(aircraftSearchParameters);
+        return aircraftService.findAircraftByParameters(aircraftSearchParameters);
     }
 
     @PostMapping("/aircraft")

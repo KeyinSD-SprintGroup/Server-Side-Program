@@ -1,6 +1,6 @@
 package com.keyin.airport;
 
-public class Airport {
+public class AirportSearchParameters {
     private Long id;
     private String name;
     private String code;
@@ -9,7 +9,10 @@ public class Airport {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
+        if (id < 0) {
+            throw new IllegalArgumentException();
+        }
         this.id = id;
     }
 
@@ -31,7 +34,7 @@ public class Airport {
 
     @Override
     public String toString() {
-        return "Airport{" +
+        return "AirportSearchParameters{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +
