@@ -4,7 +4,7 @@ public class AircraftSearchParameters {
     private Long id;
     private String type;
     private String airlineName;
-    private int numberOfPassengers;
+    private Integer numberOfPassengers;
 
     public String getType() {
         return type;
@@ -33,7 +33,7 @@ public class AircraftSearchParameters {
         this.airlineName = airlineName;
     }
 
-    public int getNumberOfPassengers() {
+    public Integer getNumberOfPassengers() {
         return numberOfPassengers;
     }
 
@@ -42,5 +42,15 @@ public class AircraftSearchParameters {
             throw new IllegalArgumentException();
         }
         this.numberOfPassengers = numberOfPassengers;
+    }
+
+    @Override
+    public String toString() {
+        return "AircraftSearchParameters{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", airlineName='" + airlineName + '\'' +
+                ", numberOfPassengers=" + numberOfPassengers +
+                '}';
     }
 }

@@ -21,26 +21,31 @@ public class AircraftController {
     public List<Aircraft> getAircraftByParameters(
             @RequestParam(required = false) Long id,
             @RequestParam(required = false)  String type,
-            @RequestParam(required = false) String airlineName,
-            @RequestParam(required = false) Integer numberOfPassengers) {
+            @RequestParam(name = "airlinename", required = false) String airlineName,
+            @RequestParam(name = "numberofpassengers", required = false) Integer numberOfPassengers) {
         AircraftSearchParameters aircraftSearchParameters = new AircraftSearchParameters();
         try {
             if (id != null) {
+                System.out.println(id);
                 aircraftSearchParameters.setId(id);
             }
             if (type != null) {
+                System.out.println(type);
                 aircraftSearchParameters.setType(type);
             }
             if (airlineName != null) {
+                System.out.println(airlineName);
                 aircraftSearchParameters.setAirlineName(airlineName);
             }
             if (numberOfPassengers != null) {
+                System.out.println(numberOfPassengers);
                 aircraftSearchParameters.setNumberOfPassengers(numberOfPassengers);
             }
         } catch (IllegalArgumentException e) {
             System.err.println("IllegalArgumentException: " + e.getMessage());
             return new ArrayList<>();
         }
+        System.out.println(aircraftSearchParameters);
         return aircraftService.findAircraftBySearchParameters(aircraftSearchParameters);
     }
 

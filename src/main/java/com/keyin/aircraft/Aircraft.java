@@ -1,17 +1,17 @@
 package com.keyin.aircraft;
 
 public class Aircraft {
-    private long id;
+    private Long id;
     private String type;
     private String airlineName;
-    private int numberOfPassengers;
+    private Integer numberOfPassengers;
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         if (id < 0) {
             throw new IllegalArgumentException("id must be 0 or greater");
         }
@@ -34,7 +34,7 @@ public class Aircraft {
         this.airlineName = airlineName;
     }
 
-    public int getNumberOfPassengers() {
+    public Integer getNumberOfPassengers() {
         return numberOfPassengers;
     }
 

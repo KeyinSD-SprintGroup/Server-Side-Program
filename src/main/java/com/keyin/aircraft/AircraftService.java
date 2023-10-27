@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class AircraftService {
@@ -23,7 +24,7 @@ public class AircraftService {
 
         for (Aircraft aircraft : aircraftList) {
             if (aircraftSearchParameters.getId() != null &&
-                    aircraft.getId() != aircraftSearchParameters.getId()) {
+                    !Objects.equals(aircraft.getId(), aircraftSearchParameters.getId())) {
                 continue;
             }
             if (aircraftSearchParameters.getType() != null &&
@@ -34,13 +35,12 @@ public class AircraftService {
                     !aircraft.getAirlineName().equalsIgnoreCase(aircraftSearchParameters.getAirlineName())) {
                 continue;
             }
-            if (aircraftSearchParameters.getNumberOfPassengers() != -1 &&
-                    aircraft.getNumberOfPassengers() != aircraftSearchParameters.getNumberOfPassengers()){
+            if (aircraftSearchParameters.getNumberOfPassengers() != null &&
+                    !Objects.equals(aircraft.getNumberOfPassengers(), aircraftSearchParameters.getNumberOfPassengers())) {
                 continue;
             }
             searchResults.add(aircraft);
         }
-
         return searchResults;
     }
 }
