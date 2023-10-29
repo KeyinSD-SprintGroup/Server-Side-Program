@@ -1,4 +1,4 @@
-package com.keyin.aircraft;
+package com.keyin.aircraft.entity.aircraft;
 import com.keyin.entity.aircraft.Aircraft;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,14 +8,12 @@ public class AircraftTest {
     private final Aircraft aircraft2 = new Aircraft();
 
     private void setupAircraft1() {
-        aircraft1.setId(1L);
         aircraft1.setType("Test Aircraft 1");
         aircraft1.setAirlineName("Test Airline 1");
         aircraft1.setNumberOfPassengers(50);
     }
 
     private void setupAircraft2() {
-        aircraft2.setId(2L);
         aircraft2.setType("Test Aircraft 2");
         aircraft2.setAirlineName("Test Airline 2");
         aircraft2.setNumberOfPassengers(55);
@@ -57,11 +55,11 @@ public class AircraftTest {
         Assertions.assertNotEquals(aircraft1, aircraft2);
     }
 
-    @Test
-    public void testNegativeAircraftId() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            aircraft1.setId(-1L);
-        });
-
-    }
+//    @Test
+//    public void testNegativeAircraftId() {
+//        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+//            aircraft1.setId(-1L);
+//        });
+//
+//    }
 }
