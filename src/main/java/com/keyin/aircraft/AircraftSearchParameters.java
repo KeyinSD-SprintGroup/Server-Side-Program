@@ -5,6 +5,15 @@ public class AircraftSearchParameters {
     private String type;
     private String airlineName;
     private Integer numberOfPassengers;
+    private Long airportId;
+
+    public Long getAirportId() {
+        return airportId;
+    }
+
+    public void setAirportId(Long airportId) {
+        this.airportId = airportId;
+    }
 
     public String getType() {
         return type;

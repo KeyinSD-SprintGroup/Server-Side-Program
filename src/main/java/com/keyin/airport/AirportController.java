@@ -23,7 +23,8 @@ public class AirportController {
     public List<Airport> getAirportByParameters(
             @RequestParam(required = false) Long id,
             @RequestParam(required = false) String name,
-            @RequestParam(required = false) String code) {
+            @RequestParam(required = false) String code,
+            @RequestParam(name = "cityname", required = false) String cityName) {
         AirportSearchParameters airportSearchParameters = new AirportSearchParameters();
         try {
             if (id != null) {
@@ -37,6 +38,10 @@ public class AirportController {
             if (code != null) {
                 System.out.println("Code: " + code);
                 airportSearchParameters.setCode(code);
+            }
+            if (cityName != null) {
+                System.out.println(cityName);
+                airportSearchParameters.setCityName(cityName);
             }
         } catch (IllegalArgumentException e) {
             System.err.println("IllegalArgumentException: " + e.getMessage());

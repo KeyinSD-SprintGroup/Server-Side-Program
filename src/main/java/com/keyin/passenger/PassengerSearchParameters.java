@@ -1,25 +1,18 @@
 package com.keyin.passenger;
 
-public class Passenger {
-    private static long nextId;
-    private long id = nextId();
+public class PassengerSearchParameters {
+    private long id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
 
-    private long nextId() {
-        long thisId = nextId;
-        nextId ++;
-        return thisId;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-//    public void setId(long id) {
-//        this.id = id;
-//    }
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -43,5 +36,15 @@ public class Passenger {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "PassengerSearchParameters{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }

@@ -37,6 +37,10 @@ public class AirportService {
                     !airport.getCode().equalsIgnoreCase(airportSearchParameters.getCode())) {
                 continue;
             }
+            if (airportSearchParameters.getCityName() != null &&
+                    !airport.getCity().getName().equalsIgnoreCase(airportSearchParameters.getCityName())) {
+                continue;
+            }
             searchResults.add(airport);
         }
         return searchResults;
