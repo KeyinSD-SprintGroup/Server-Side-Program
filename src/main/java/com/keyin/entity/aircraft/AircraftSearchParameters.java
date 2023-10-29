@@ -1,4 +1,4 @@
-package com.keyin.aircraft;
+package com.keyin.entity.aircraft;
 
 public class AircraftSearchParameters {
     private Long id;

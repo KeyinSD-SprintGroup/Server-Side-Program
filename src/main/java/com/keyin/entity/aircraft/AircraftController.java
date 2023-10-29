@@ -1,7 +1,7 @@
-package com.keyin.aircraft;
+package com.keyin.entity.aircraft;
 
-import com.keyin.airport.AirportService;
-import com.keyin.passenger.PassengerService;
+import com.keyin.entity.airport.AirportService;
+import com.keyin.entity.passenger.PassengerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

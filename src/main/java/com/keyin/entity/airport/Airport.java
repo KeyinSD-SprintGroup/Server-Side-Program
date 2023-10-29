@@ -1,28 +1,26 @@
-package com.keyin.airport;
+package com.keyin.entity.airport;
 
-public class AirportSearchParameters {
-    private Long id;
+import com.keyin.entity.city.City;
+import com.keyin.utility.IdGenerator;
+
+public class Airport {
+    private static final IdGenerator idGenerator = new IdGenerator();
+    private final long id = idGenerator.getNextId();
     private String name;
     private String code;
-    private String cityName;
+    private City city;
 
-    public String getCityName() {
-        return cityName;
+
+    public City getCity() {
+        return city;
     }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
+    public void setCity(City city) {
+        this.city = city;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        if (id < 0) {
-            throw new IllegalArgumentException();
-        }
-        this.id = id;
     }
 
     public String getName() {
@@ -43,7 +41,7 @@ public class AirportSearchParameters {
 
     @Override
     public String toString() {
-        return "AirportSearchParameters{" +
+        return "Airport{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +

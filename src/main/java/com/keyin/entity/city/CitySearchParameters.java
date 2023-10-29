@@ -1,4 +1,4 @@
-package com.keyin.city;
+package com.keyin.entity.city;
 
 public class CitySearchParameters {
     private Long id;

@@ -1,6 +1,5 @@
-package com.keyin.city;
+package com.keyin.entity.city;
 
-import com.keyin.airport.Airport;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,35 +1,29 @@
-package com.keyin.airport;
+package com.keyin.entity.airport;
 
-import com.keyin.city.City;
-
-public class Airport {
-    private static long nextId = 0;
-    private long id = nextId();
+public class AirportSearchParameters {
+    private Long id;
     private String name;
     private String code;
-    private City city;
+    private String cityName;
 
-    private long nextId() {
-        long thisId = nextId;
-        nextId ++;
-        return thisId;
+    public String getCityName() {
+        return cityName;
     }
 
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
     public Long getId() {
         return id;
     }
 
-//    public void setId(long id) {
-//        this.id = id;
-//    }
+    public void setId(Long id) {
+        if (id < 0) {
+            throw new IllegalArgumentException();
+        }
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -49,7 +43,7 @@ public class Airport {
 
     @Override
     public String toString() {
-        return "Airport{" +
+        return "AirportSearchParameters{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +

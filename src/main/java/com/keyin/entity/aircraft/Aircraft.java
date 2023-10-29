@@ -1,25 +1,20 @@
-package com.keyin.aircraft;
+package com.keyin.entity.aircraft;
 
-import com.keyin.airport.Airport;
-import com.keyin.passenger.Passenger;
+import com.keyin.entity.airport.Airport;
+import com.keyin.entity.passenger.Passenger;
+import com.keyin.utility.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Aircraft {
-    private static long nextId = 0;
-    private long id = nextId();
+    private static final IdGenerator idGenerator = new IdGenerator();
+    private final long id = idGenerator.getNextId();
     private String type;
     private String airlineName;
     private Integer numberOfPassengers;
     private List<Passenger> passengerList;
     private List<Airport> airportList;
-
-    private long nextId() {
-        long thisId = nextId;
-        nextId ++;
-        return thisId;
-    }
 
     public void appendAirport(Airport airport) {
         if (airportList == null) {
@@ -46,16 +41,9 @@ public class Aircraft {
         }
         return passengerList;
     }
-    public Long getId() {
+    public long getId() {
         return id;
     }
-
-//    public void setId(long id) {
-//        if (id < 0) {
-//            throw new IllegalArgumentException("id must be 0 or greater");
-//        }
-//        this.id = id;
-//    }
 
     public String getType() {
         return type;

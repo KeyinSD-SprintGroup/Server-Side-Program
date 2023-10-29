@@ -1,25 +1,17 @@
-package com.keyin.passenger;
+package com.keyin.entity.passenger;
+
+import com.keyin.utility.IdGenerator;
 
 public class Passenger {
-    private static long nextId;
-    private long id = nextId();
+    private static final IdGenerator idGenerator = new IdGenerator();
+    private final long id = idGenerator.getNextId();
     private String firstName;
     private String lastName;
     private String phoneNumber;
 
-    private long nextId() {
-        long thisId = nextId;
-        nextId ++;
-        return thisId;
-    }
-
     public long getId() {
         return id;
     }
-
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     public String getFirstName() {
         return firstName;

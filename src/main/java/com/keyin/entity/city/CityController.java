@@ -1,7 +1,5 @@
-package com.keyin.city;
+package com.keyin.entity.city;
 
-import com.keyin.airport.Airport;
-import com.keyin.airport.AirportSearchParameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

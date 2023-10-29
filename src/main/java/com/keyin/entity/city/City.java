@@ -1,25 +1,17 @@
-package com.keyin.city;
+package com.keyin.entity.city;
+
+import com.keyin.utility.IdGenerator;
 
 public class City {
-    private static long nextId;
-    private long id = nextId();
+    private static final IdGenerator idGenerator = new IdGenerator();
+    private final long id = idGenerator.getNextId();
     private String name;
     private String state;
     private int population;
 
-    private long nextId() {
-        long thisId = nextId;
-        nextId ++;
-        return thisId;
-    }
-
     public long getId() {
         return id;
     }
-
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     public String getName() {
         return name;
@@ -43,5 +35,15 @@ public class City {
 
     public void setPopulation(int population) {
         this.population = population;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", state='" + state + '\'' +
+                ", population=" + population +
+                '}';
     }
 }

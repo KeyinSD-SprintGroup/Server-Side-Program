@@ -1,4 +1,4 @@
-package com.keyin.passenger;
+package com.keyin.entity.passenger;
 
 public class PassengerSearchParameters {
     private long id;
