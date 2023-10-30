@@ -1,5 +1,6 @@
 package com.keyin.entity.passenger;
 
+import com.keyin.entity.airport.Airport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,12 +18,20 @@ public class PassengerController {
         return passengerService.getAllPassenger();
     }
 
+    @GetMapping("/passenger_by_id")
+    public Passenger getPassengerById(
+            @RequestParam Long id) {
+        if (passengerService.getPassengerById(id) != null) {
+            return passengerService.getPassengerById(id);
+        } else return null;
+    }
+
     @GetMapping("/passenger_search")
-    public List<Passenger> getCityByParameters(
+    public List<Passenger> getPassengerByParameters(
             @RequestParam(required = false) Long id,
             @RequestParam(name="firstname", required = false) String firstName,
             @RequestParam(name="lastName", required = false) String lastName,
-            @RequestParam(name="phonenumber", required = false) String phoneNumber) {
+            @RequestParam(name="phoneNumber", required = false) String phoneNumber) {
         PassengerSearchParameters passengerSearchParameters = new PassengerSearchParameters();
         try {
             if (id != null) {
