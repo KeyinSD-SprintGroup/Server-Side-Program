@@ -1,5 +1,6 @@
 package com.keyin.entity.airport;
 
+import com.keyin.entity.aircraft.Aircraft;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,6 +13,9 @@ public class AirportService {
 
     public List<Airport> getAllAirport() {
         return airportList;
+    }
+    public long airportListSize() {
+        return airportList.size();
     }
 
     public Airport createAirport(Airport airport) {
@@ -35,12 +39,16 @@ public class AirportService {
                     !airport.getCode().equalsIgnoreCase(airportSearchParameters.getCode())) {
                 continue;
             }
-            if (airportSearchParameters.getCityName() != null &&
-                    !airport.getCity().getName().equalsIgnoreCase(airportSearchParameters.getCityName())) {
+            if (airportSearchParameters.getCityId() != null &&
+                    !airport.getCityId().equals(airportSearchParameters.getCityId())) {
                 continue;
             }
             searchResults.add(airport);
         }
         return searchResults;
+    }
+
+    public Airport getAirportById(long id) {
+        return airportList.get((int) id);
     }
 }

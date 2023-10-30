@@ -8,15 +8,15 @@ public class Airport {
     private final long id = idGenerator.getNextId();
     private String name;
     private String code;
-    private City city;
+    private long cityId;
 
 
-    public City getCity() {
-        return city;
+    public Long getCityId() {
+        return cityId;
     }
 
-    public void setCity(City city) {
-        this.city = city;
+    public void setCityId(long id) {
+        this.cityId = id;
     }
 
     public long getId() {

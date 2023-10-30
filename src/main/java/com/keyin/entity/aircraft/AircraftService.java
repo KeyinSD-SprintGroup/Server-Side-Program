@@ -43,4 +43,8 @@ public class AircraftService {
         }
         return searchResults;
     }
+
+    public Aircraft getAircraftById(long id) {
+        return aircraftList.get((int) id);
+    }
 }

@@ -1,5 +1,6 @@
 package com.keyin.entity.city;
 
+import com.keyin.entity.aircraft.Aircraft;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,14 @@ public class CityController {
     @GetMapping("/city")
     public List<City> getAllCity(){
         return cityService.getAllCity();
+    }
+
+    @GetMapping("/city_by_id")
+    public City getCityById(
+            @RequestParam Long id) {
+        if (cityService.getCityById(id) != null) {
+            return cityService.getCityById(id);
+        } else return null;
     }
 
     @GetMapping("/city_search")

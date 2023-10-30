@@ -13,33 +13,33 @@ public class Aircraft {
     private String type;
     private String airlineName;
     private Integer numberOfPassengers;
-    private List<Passenger> passengerList;
-    private List<Airport> airportList;
+    private List<Long> passengerIdList;
+    private List<Long> airportIdList;
 
-    public void appendAirport(Airport airport) {
-        if (airportList == null) {
-            airportList = new ArrayList<>();
+    public void appendAirport(long id) {
+        if (airportIdList == null) {
+            airportIdList = new ArrayList<>();
         }
-        airportList.add(airport);
+        airportIdList.add(id);
     }
 
-    public List<Airport> getAirportList() {
-        if (airportList == null) {
-            airportList = new ArrayList<>();
+    public List<Long> getAirportIdList() {
+        if (airportIdList == null) {
+            airportIdList = new ArrayList<>();
         }
-        return airportList;
+        return airportIdList;
     }
-    public void appendPassenger(Passenger passenger) {
-        if (passengerList == null) {
-            passengerList = new ArrayList<>();
+    public void appendPassenger(long id) {
+        if (passengerIdList == null) {
+            passengerIdList = new ArrayList<>();
         }
-        passengerList.add(passenger);
+        passengerIdList.add(id);
     }
-    public List<Passenger> getPassengerList() {
-        if (passengerList == null) {
-            passengerList = new ArrayList<>();
+    public List<Long> getPassengerIdList() {
+        if (passengerIdList == null) {
+            passengerIdList = new ArrayList<>();
         }
-        return passengerList;
+        return passengerIdList;
     }
     public long getId() {
         return id;

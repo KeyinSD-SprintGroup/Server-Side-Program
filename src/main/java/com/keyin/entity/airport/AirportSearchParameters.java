@@ -4,14 +4,14 @@ public class AirportSearchParameters {
     private Long id;
     private String name;
     private String code;
-    private String cityName;
+    private Long cityId;
 
-    public String getCityName() {
-        return cityName;
+    public Long getCityId() {
+        return cityId;
     }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
+    public void setCityId(Long id) {
+        this.cityId = id;
     }
 
     public Long getId() {

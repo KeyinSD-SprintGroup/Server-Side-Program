@@ -18,12 +18,20 @@ public class AirportController {
         return airportService.getAllAirport();
     }
 
+    @GetMapping("/airport_by_id")
+    public Airport getAirportById(
+            @RequestParam Long id) {
+        if (airportService.getAirportById(id) != null) {
+            return airportService.getAirportById(id);
+        } else return null;
+    }
+
     @GetMapping("/airport_search")
     public List<Airport> getAirportByParameters(
             @RequestParam(required = false) Long id,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String code,
-            @RequestParam(name = "cityname", required = false) String cityName) {
+            @RequestParam(name = "cityid", required = false) Long cityId) {
         AirportSearchParameters airportSearchParameters = new AirportSearchParameters();
         try {
             if (id != null) {
@@ -38,9 +46,9 @@ public class AirportController {
                 System.out.println("Code: " + code);
                 airportSearchParameters.setCode(code);
             }
-            if (cityName != null) {
-                System.out.println(cityName);
-                airportSearchParameters.setCityName(cityName);
+            if (cityId != null) {
+                System.out.println(cityId);
+                airportSearchParameters.setCityId(cityId);
             }
         } catch (IllegalArgumentException e) {
             System.err.println("IllegalArgumentException: " + e.getMessage());

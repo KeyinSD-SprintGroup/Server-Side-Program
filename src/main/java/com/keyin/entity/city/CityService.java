@@ -40,4 +40,8 @@ public class CityService {
         }
         return searchResults;
     }
+
+    public City getCityById(long id) {
+        return cityList.get((int) id);
+    }
 }
