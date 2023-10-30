@@ -1,5 +1,7 @@
 package com.keyin.entity.passenger;
 
+import com.keyin.entity.aircraft.Aircraft;
+import com.keyin.entity.airport.Airport;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -42,5 +44,9 @@ public class PassengerService {
             searchResults.add(passenger);
         }
         return searchResults;
+    }
+
+    public Passenger getPassengerById(long id) {
+        return passengerList.get((int) id);
     }
 }
