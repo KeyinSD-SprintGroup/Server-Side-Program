@@ -1,7 +1,6 @@
-package com.keyin.airport;
+package com.keyin.entity.airport;
 
 
-import com.keyin.aircraft.AircraftSearchParameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,11 +18,20 @@ public class AirportController {
         return airportService.getAllAirport();
     }
 
+    @GetMapping("/airport_by_id")
+    public Airport getAirportById(
+            @RequestParam Long id) {
+        if (airportService.getAirportById(id) != null) {
+            return airportService.getAirportById(id);
+        } else return null;
+    }
+
     @GetMapping("/airport_search")
     public List<Airport> getAirportByParameters(
             @RequestParam(required = false) Long id,
             @RequestParam(required = false) String name,
-            @RequestParam(required = false) String code) {
+            @RequestParam(required = false) String code,
+            @RequestParam(name = "cityid", required = false) Long cityId) {
         AirportSearchParameters airportSearchParameters = new AirportSearchParameters();
         try {
             if (id != null) {
@@ -37,6 +45,10 @@ public class AirportController {
             if (code != null) {
                 System.out.println("Code: " + code);
                 airportSearchParameters.setCode(code);
+            }
+            if (cityId != null) {
+                System.out.println(cityId);
+                airportSearchParameters.setCityId(cityId);
             }
         } catch (IllegalArgumentException e) {
             System.err.println("IllegalArgumentException: " + e.getMessage());

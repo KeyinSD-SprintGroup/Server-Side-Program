@@ -1,10 +1,19 @@
-package com.keyin.aircraft;
+package com.keyin.entity.aircraft;
 
 public class AircraftSearchParameters {
     private Long id;
     private String type;
     private String airlineName;
     private Integer numberOfPassengers;
+    private Long airportId;
+
+    public Long getAirportId() {
+        return airportId;
+    }
+
+    public void setAirportId(Long airportId) {
+        this.airportId = airportId;
+    }
 
     public String getType() {
         return type;

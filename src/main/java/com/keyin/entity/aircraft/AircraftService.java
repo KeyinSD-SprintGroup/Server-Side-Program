@@ -1,4 +1,4 @@
-package com.keyin.aircraft;
+package com.keyin.entity.aircraft;
 
 import org.springframework.stereotype.Service;
 
@@ -42,5 +42,9 @@ public class AircraftService {
             searchResults.add(aircraft);
         }
         return searchResults;
+    }
+
+    public Aircraft getAircraftById(long id) {
+        return aircraftList.get((int) id);
     }
 }
