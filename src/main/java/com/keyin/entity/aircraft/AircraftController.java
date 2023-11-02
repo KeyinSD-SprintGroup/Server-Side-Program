@@ -13,35 +13,16 @@ import java.util.List;
 @CrossOrigin
 public class AircraftController {
     private final AircraftService aircraftService;
-    private final PassengerService passengerService;
-    private final AirportService airportService;
+
 
     @Autowired
-    public AircraftController(AircraftService aircraftService, PassengerService passengerService, AirportService airportService){
+    public AircraftController(AircraftService aircraftService){
         this.aircraftService = aircraftService;
-        this.passengerService = passengerService;
-        this.airportService = airportService;
     }
 
     @GetMapping("/aircraft")
     public List<Aircraft> getAllAircraft(){
         return aircraftService.getAllAircraft();
-    }
-
-    @GetMapping("/aircraft_add_airport")
-    public void addAirportToAirportList(
-            @RequestParam long aircraftId,
-            @RequestParam long airportId) {
-        try {
-            if (aircraftService.getAircraftById(aircraftId) != null &&
-                    airportService.getAirportById(airportId) != null &&
-                    !aircraftService.getAircraftById(aircraftId).getAirportIdList().contains(airportId)) {
-                aircraftService.getAircraftById(aircraftId).appendAirport(airportId);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
     }
 
     @GetMapping("/aircraft_by_id")
