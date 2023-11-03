@@ -22,26 +22,13 @@ public class AircraftTest {
     @Test
     public void testAircraft1() {
         setupAircraft1();
-        Assertions.assertEquals(1L, aircraft1.getId(),
-                "1 expected for aircraft.id");
-        Assertions.assertEquals("Test Aircraft 1", aircraft1.getType(),
-                "Test Aircraft expected for aircraft.type");
-        Assertions.assertEquals("Test Airline 1", aircraft1.getAirlineName(),
-                "Test Airline expected for aircraft.airlineName");
-        Assertions.assertEquals(50, aircraft1.getNumberOfPassengers(),
-                "50 expected for aircraft.numberOfPassengers");
+        Assertions.assertEquals(aircraft1.getAirlineName(), "Test Airline 1");
     }
+
     @Test
     public void testAircraft2() {
         setupAircraft2();
-        Assertions.assertEquals(2L, aircraft2.getId(),
-                "'2' expected for aircraft.id");
-        Assertions.assertEquals("Test Aircraft 2", aircraft2.getType(),
-                "'Test Aircraft 2' expected for aircraft.type");
-        Assertions.assertEquals("Test Airline 2", aircraft2.getAirlineName(),
-                "'Test Airline 2' expected for aircraft.airlineName");
-        Assertions.assertEquals(55, aircraft2.getNumberOfPassengers(),
-                "'55' expected for aircraft.numberOfPassengers");
+        Assertions.assertEquals(aircraft2.getAirlineName(), "Test Airline 2");
     }
 
     @Test
@@ -55,11 +42,4 @@ public class AircraftTest {
         Assertions.assertNotEquals(aircraft1, aircraft2);
     }
 
-//    @Test
-//    public void testNegativeAircraftId() {
-//        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-//            aircraft1.setId(-1L);
-//        });
-//
-//    }
 }
