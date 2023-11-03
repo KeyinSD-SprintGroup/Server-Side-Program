@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "80f5e823-4dfe-46a9-9daf-d08f5eeea643",
+		"name": "aircraft-post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28311214",
+		"_collection_link": "https://orange-space-402826.postman.co/workspace/fedf05e8-ad07-4e4a-8baf-064652659763/collection/28311214-80f5e823-4dfe-46a9-9daf-d08f5eeea643?action=share&source=collection_link&creator=28311214"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Boeing 747\",\r\n    \"airlineName\": \"Delta\",\r\n    \"numberOfPassengers\": 400,\r\n\t\"passengerIdList\": [0,7,9],\r\n\t\"airportIdList\": [0,2,7]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Airbus A320\",\r\n    \"airlineName\": \"American Airlines\",\r\n    \"numberOfPassengers\": 180,\r\n\t\"passengerIdList\": [1],\r\n\t\"airportIdList\": [1,3,4]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Boeing 737\",\r\n    \"airlineName\": \"United\",\r\n    \"numberOfPassengers\": 160,\r\n\t\"passengerIdList\": [0,2,6],\r\n\t\"airportIdList\": [2,0,7]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Airbus A350\",\r\n    \"airlineName\": \"Delta\",\r\n    \"numberOfPassengers\": 350,\r\n    \"passengerIdList\": [1,5,9],\r\n\t\"airportIdList\": [3,5]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Boeing 777\",\r\n    \"airlineName\": \"American Airlines\",\r\n    \"numberOfPassengers\": 350,\r\n    \"passengerIdList\": [3,4],\r\n\t\"airportIdList\": [4,6,8,9]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Boeing 747\",\r\n    \"airlineName\": \"Delta\",\r\n    \"numberOfPassengers\": 400,\r\n    \"passengerIdList\": [2,8],\r\n\t\"airportIdList\": [0,2,7]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Airbus A230\",\r\n    \"airlineName\": \"SunWing\",\r\n    \"numberOfPassengers\": 120,\r\n\t\"passengerIdList\": [5,7,9],\r\n\t\"airportIdList\": [1,3,4]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Helicopter\",\r\n    \"airlineName\": \"United\",\r\n    \"numberOfPassengers\": 9,\r\n    \"passengerIdList\": [1,4,6],\r\n\t\"airportIdList\": [2,0,7]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Airbus 787\",\r\n    \"airlineName\": \"Delta\",\r\n    \"numberOfPassengers\": 480,\r\n    \"passengerIdList\": [4,7],\r\n\t\"airportIdList\": [3,5,7,8,9]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Boeing 737\",\r\n    \"airlineName\": \"American Airlines\",\r\n    \"numberOfPassengers\": 110,\r\n    \"passengerIdList\": [3,8],\r\n\t\"airportIdList\": [6,8,9]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aircraft",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aircraft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aircraft"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
